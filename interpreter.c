@@ -67,7 +67,7 @@ void interpret_command(char *input)
 	{
 		if (args[1] == NULL)
 		{
-			fprintf(stderr, "cd: expected argument\n");
+			printf(stderr, "cd: expected argument\n");
 		}
 		else if (chdir(args[1]) != 0)
 		{
@@ -81,7 +81,7 @@ void interpret_command(char *input)
 		if (pid == 0)
 		{
 			execvp(args[0], args);
-			fprintf(stderr, "%s: command not found\n", args[0]);
+			printf(stderr, "%s: command not found\n", args[0]);
 			exit(EXIT_FAILURE);
 		}
 		else if (pid > 0)
