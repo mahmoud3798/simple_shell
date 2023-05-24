@@ -37,9 +37,9 @@ int parse_command(char *buffer, char **args)
  * execute_command - executes a command in a child process
  * @args: arguments for command
  **/
-void execute_command(char **args)
+void execute_command(char **args, char *env[])
 {
-	execvp(args[0], args);
+	execvp(args[0], args, env);
 	printf("%s: command not found\n", args[0]);
 	exit(1);
 }
@@ -47,7 +47,7 @@ void execute_command(char **args)
 * main - Entry point
 * Return: always 0
 */
-int main(void)
+int main(int argc, char *argv[], char *env[])
 {
 	char *buffer;
 	size_t bufsize = BUFFER_SIZE;
@@ -79,7 +79,7 @@ int main(void)
 			pid = fork();
 			if (pid == 0)
 			{
-				execute_command(args);
+				execute_command(args, env);
 			}
 			else
 			{
