@@ -1,0 +1,45 @@
+.SH NAME
+simple_shell - a simple command-line interpreter
+
+.SH SYNOPSIS
+simple_shell
+
+.SH DESCRIPTION
+The simple_shell program is a command-line
+interpreter that reads input from the user and
+executes the commands entered.
+The program is designed to run on Linux-based
+operating systems and is written in the C programming language.
+
+.SH OPTIONS
+There are no options for the simple_shell program.
+
+.SH USAGE
+The simple_shell program is used by invoking
+the executable file from the command line.
+Once the program is running, the user can enter commands
+to be executed. The program will display a prompt
+and wait for the user to enter a command.
+The command lines are simple, no semicolons,
+no pipes, no redirections or any other advanced features.
+The command lines are made only of one word.
+No arguments will be passed to programs.
+
+The program will continue to loop until the
+user enters Ctrl+D to indicate the end of input.
+
+.SH ERRORS
+If an executable cannot be found, the program will
+print an error message and display the prompt again.
+
+.SH SEE ALSO
+sh(1), bash(1), zsh(1), csh(1)
+
+.SH AUTHOR
+The simple_shell program was written by mahmoud.
+
+.SH COPYRIGHT
+Copyright (c) [2023][mahmoud].
+This program is free software;
+you can redistribute it and/or modify it under
+the terms of the GNU General
