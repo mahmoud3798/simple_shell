@@ -36,6 +36,7 @@ int parse_command(char *buffer, char **args)
 /**
  * execute_command - executes a command in a child process
  * @args: arguments for command
+ * @env: environment variables
  **/
 void execute_command(char **args, char *env[])
 {
@@ -45,6 +46,9 @@ void execute_command(char **args, char *env[])
 }
 /**
 * main - Entry point
+* @argc: int
+* @argv: char pointer
+* @env: environment variables
 * Return: always 0
 */
 int main(int argc, char *argv[], char *env[])
